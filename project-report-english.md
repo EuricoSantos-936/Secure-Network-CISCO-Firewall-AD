@@ -109,8 +109,11 @@ Router(config)# exit
 On the Firewall
 
 ```
-Firewall# configure terminal
-! Configure similar ACLs for monitoring and control
+Router> enable
+Router# configure terminal
+Router(config)# access-list 101 permit tcp 192.168.2.0 0.0.0.255 192.168.3.0 0.0.0.255 eq 80
+Router(config)# end
+! Allowing HTTP Traffic from Vendas VLAN to Finanças VLAN
 ```
 
 **7. Testing and Verification**
